@@ -36,6 +36,7 @@
         () log:onMetadataSurface {
             _:S _:P _:O .
             << _:S _:P _:O  >> _:X _:Y .
+            << _:S _:P _:O  >> :addedByPolicy :Policy1  .
         } .
     } .
 } .

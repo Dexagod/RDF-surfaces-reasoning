@@ -9,8 +9,8 @@
 
 () log:onResultSurface {_:e_e_bn_3_1_1 a vcard:Work}.
 () log:onResultSurface {_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>}.
-() log:onMetadataSurface {_:e_e_bn_3_1_1 a vcard:Work. <<_:e_e_bn_3_1_1 a vcard:Work>> <urn:example:category> vcard:Work}.
-() log:onMetadataSurface {_:e_e_bn_3_1_1 a vcard:Work. <<_:e_e_bn_3_1_1 a vcard:Work>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>}.
-() log:onMetadataSurface {_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>. <<_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:category> vcard:Work}.
-() log:onMetadataSurface {_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>. <<_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>}.
+() log:onMetadataSurface {_:e_e_bn_3_1_1 a vcard:Work. <<_:e_e_bn_3_1_1 a vcard:Work>> <urn:example:category> vcard:Work. <<_:e_e_bn_3_1_1 a vcard:Work>> <urn:example:byPolicy> <urn:example:Policy1>}.
+() log:onMetadataSurface {_:e_e_bn_3_1_1 a vcard:Work. <<_:e_e_bn_3_1_1 a vcard:Work>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>. <<_:e_e_bn_3_1_1 a vcard:Work>> <urn:example:byPolicy> <urn:example:Policy1>}.
+() log:onMetadataSurface {_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>. <<_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:category> vcard:Work. <<_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:byPolicy> <urn:example:Policy1>}.
+() log:onMetadataSurface {_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>. <<_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>. <<_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:byPolicy> <urn:example:Policy1>}.
 
