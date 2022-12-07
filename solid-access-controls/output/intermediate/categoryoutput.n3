@@ -1,0 +1,175 @@
+@prefix : <urn:example:>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+@prefix ruben: <https://rubendedecker.be/profile/card#me>.
+
+<urn:example:Person1> a foaf:Person.
+<urn:example:Person2> a vcard:Individual.
+_:e_bn_1_1 a vcard:Home.
+_:e_bn_1_1 a vcard:Voice.
+_:e_bn_2_1 a vcard:Home.
+_:e_bn_3_1 a vcard:Work.
+<urn:example:Person1> a vcard:Individual.
+<urn:example:Person2> a foaf:Person.
+<urn:example:Person1> foaf:name "Alice".
+<urn:example:Person1> foaf:phone <urn:tel:0012-1219-212-121>.
+<urn:example:Person2> foaf:phone <urn:tel:0213-3123-1231>.
+<urn:example:Person1> foaf:mbox <mail:alice@somewhere.org>.
+<urn:example:Person2> foaf:mbox <mail:bob@somewhere.org>.
+<urn:example:Person2> foaf:mbox <mail:bob@somewhereElse.org>.
+<urn:example:Person1> foaf:address <urn:example:Address1>.
+<urn:example:Person1> <urn:example:inLoveWith> <urn:example:Person2>.
+<urn:example:Address1> foaf:streetName <urn:example:FarlaneRoad>.
+<urn:example:Address1> foaf:city <urn:example:FarField>.
+<urn:example:Person2> vcard:fn "Bob".
+<urn:example:Person2> vcard:hasTelephone _:e_bn_1_1.
+<urn:example:Person1> vcard:hasTelephone _:e_sk_21_1.
+_:e_bn_1_1 vcard:hasValue <urn:tel:0213-3123-1231>.
+_:e_bn_2_1 vcard:hasValue <mail:bob@somewhere.org>.
+_:e_bn_3_1 vcard:hasValue <mail:bob@somewhereElse.org>.
+_:e_sk_20_1 vcard:hasValue <mail:alice@somewhere.org>.
+_:e_sk_21_1 vcard:hasValue <urn:tel:0012-1219-212-121>.
+<urn:example:Person2> vcard:hasEmail _:e_bn_2_1.
+<urn:example:Person2> vcard:hasEmail _:e_bn_3_1.
+<urn:example:Person1> vcard:hasEmail _:e_sk_20_1.
+<<<urn:example:Person1> a foaf:Person>> <urn:example:category> foaf:Person.
+<<<urn:example:Person1> a vcard:Individual>> <urn:example:category> foaf:Person.
+<<<urn:example:Person1> foaf:name "Alice">> <urn:example:category> foaf:Person.
+<<<urn:example:Person1> foaf:phone <urn:tel:0012-1219-212-121>>> <urn:example:category> foaf:Person.
+<<<urn:example:Person1> foaf:mbox <mail:alice@somewhere.org>>> <urn:example:category> foaf:Person.
+<<<urn:example:Person1> foaf:address <urn:example:Address1>>> <urn:example:category> foaf:Person.
+<<<urn:example:Person1> <urn:example:inLoveWith> <urn:example:Person2>>> <urn:example:category> foaf:Person.
+<<<urn:example:Person1> vcard:hasTelephone _:e_sk_21_1>> <urn:example:category> foaf:Person.
+<<<urn:example:Person1> vcard:hasEmail _:e_sk_20_1>> <urn:example:category> foaf:Person.
+<<<urn:example:Person2> a vcard:Individual>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person2> a foaf:Person>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person2> foaf:phone <urn:tel:0213-3123-1231>>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person2> foaf:mbox <mail:bob@somewhere.org>>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person2> foaf:mbox <mail:bob@somewhereElse.org>>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person2> vcard:fn "Bob">> <urn:example:category> vcard:Individual.
+<<<urn:example:Person2> vcard:hasTelephone _:e_bn_1_1>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person2> vcard:hasEmail _:e_bn_2_1>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person2> vcard:hasEmail _:e_bn_3_1>> <urn:example:category> vcard:Individual.
+<<_:e_bn_1_1 a vcard:Home>> <urn:example:category> vcard:Home.
+<<_:e_bn_1_1 a vcard:Voice>> <urn:example:category> vcard:Home.
+<<_:e_bn_1_1 vcard:hasValue <urn:tel:0213-3123-1231>>> <urn:example:category> vcard:Home.
+<<_:e_bn_1_1 a vcard:Home>> <urn:example:category> vcard:Voice.
+<<_:e_bn_1_1 a vcard:Voice>> <urn:example:category> vcard:Voice.
+<<_:e_bn_1_1 vcard:hasValue <urn:tel:0213-3123-1231>>> <urn:example:category> vcard:Voice.
+<<_:e_bn_2_1 a vcard:Home>> <urn:example:category> vcard:Home.
+<<_:e_bn_2_1 vcard:hasValue <mail:bob@somewhere.org>>> <urn:example:category> vcard:Home.
+<<_:e_bn_3_1 a vcard:Work>> <urn:example:category> vcard:Work.
+<<_:e_bn_3_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:category> vcard:Work.
+<<<urn:example:Person1> a foaf:Person>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person1> a vcard:Individual>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person1> foaf:name "Alice">> <urn:example:category> vcard:Individual.
+<<<urn:example:Person1> foaf:phone <urn:tel:0012-1219-212-121>>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person1> foaf:mbox <mail:alice@somewhere.org>>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person1> foaf:address <urn:example:Address1>>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person1> <urn:example:inLoveWith> <urn:example:Person2>>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person1> vcard:hasTelephone _:e_sk_21_1>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person1> vcard:hasEmail _:e_sk_20_1>> <urn:example:category> vcard:Individual.
+<<<urn:example:Person2> a vcard:Individual>> <urn:example:category> foaf:Person.
+<<<urn:example:Person2> a foaf:Person>> <urn:example:category> foaf:Person.
+<<<urn:example:Person2> foaf:phone <urn:tel:0213-3123-1231>>> <urn:example:category> foaf:Person.
+<<<urn:example:Person2> foaf:mbox <mail:bob@somewhere.org>>> <urn:example:category> foaf:Person.
+<<<urn:example:Person2> foaf:mbox <mail:bob@somewhereElse.org>>> <urn:example:category> foaf:Person.
+<<<urn:example:Person2> vcard:fn "Bob">> <urn:example:category> foaf:Person.
+<<<urn:example:Person2> vcard:hasTelephone _:e_bn_1_1>> <urn:example:category> foaf:Person.
+<<<urn:example:Person2> vcard:hasEmail _:e_bn_2_1>> <urn:example:category> foaf:Person.
+<<<urn:example:Person2> vcard:hasEmail _:e_bn_3_1>> <urn:example:category> foaf:Person.
+<<<urn:example:Person1> a foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person2> a vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<_:e_bn_1_1 a vcard:Home>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<_:e_bn_1_1 a vcard:Voice>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<_:e_bn_2_1 a vcard:Home>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<_:e_bn_3_1 a vcard:Work>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person1> a vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person2> a foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person1> foaf:name "Alice">> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person1> foaf:phone <urn:tel:0012-1219-212-121>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person2> foaf:phone <urn:tel:0213-3123-1231>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person1> foaf:mbox <mail:alice@somewhere.org>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person2> foaf:mbox <mail:bob@somewhere.org>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person2> foaf:mbox <mail:bob@somewhereElse.org>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person1> foaf:address <urn:example:Address1>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person1> <urn:example:inLoveWith> <urn:example:Person2>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Address1> foaf:streetName <urn:example:FarlaneRoad>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Address1> foaf:city <urn:example:FarField>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person2> vcard:fn "Bob">> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person2> vcard:hasTelephone _:e_bn_1_1>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person1> vcard:hasTelephone _:e_sk_21_1>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<_:e_bn_1_1 vcard:hasValue <urn:tel:0213-3123-1231>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<_:e_bn_2_1 vcard:hasValue <mail:bob@somewhere.org>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<_:e_bn_3_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<_:e_sk_20_1 vcard:hasValue <mail:alice@somewhere.org>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<_:e_sk_21_1 vcard:hasValue <urn:tel:0012-1219-212-121>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person2> vcard:hasEmail _:e_bn_2_1>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person2> vcard:hasEmail _:e_bn_3_1>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Person1> vcard:hasEmail _:e_sk_20_1>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> a foaf:Person>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> a vcard:Individual>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> foaf:name "Alice">> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> foaf:phone <urn:tel:0012-1219-212-121>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> foaf:mbox <mail:alice@somewhere.org>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> foaf:address <urn:example:Address1>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> <urn:example:inLoveWith> <urn:example:Person2>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> vcard:hasTelephone _:e_sk_21_1>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> vcard:hasEmail _:e_sk_20_1>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> a vcard:Individual>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> a foaf:Person>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> foaf:phone <urn:tel:0213-3123-1231>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> foaf:mbox <mail:bob@somewhere.org>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> foaf:mbox <mail:bob@somewhereElse.org>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> vcard:fn "Bob">> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> vcard:hasTelephone _:e_bn_1_1>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> vcard:hasEmail _:e_bn_2_1>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> vcard:hasEmail _:e_bn_3_1>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_1_1 a vcard:Home>> <urn:example:category> vcard:Home>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_1_1 a vcard:Voice>> <urn:example:category> vcard:Home>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_1_1 vcard:hasValue <urn:tel:0213-3123-1231>>> <urn:example:category> vcard:Home>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_1_1 a vcard:Home>> <urn:example:category> vcard:Voice>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_1_1 a vcard:Voice>> <urn:example:category> vcard:Voice>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_1_1 vcard:hasValue <urn:tel:0213-3123-1231>>> <urn:example:category> vcard:Voice>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_2_1 a vcard:Home>> <urn:example:category> vcard:Home>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_2_1 vcard:hasValue <mail:bob@somewhere.org>>> <urn:example:category> vcard:Home>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_3_1 a vcard:Work>> <urn:example:category> vcard:Work>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_bn_3_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:category> vcard:Work>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> a foaf:Person>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> a vcard:Individual>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> foaf:name "Alice">> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> foaf:phone <urn:tel:0012-1219-212-121>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> foaf:mbox <mail:alice@somewhere.org>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> foaf:address <urn:example:Address1>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> <urn:example:inLoveWith> <urn:example:Person2>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> vcard:hasTelephone _:e_sk_21_1>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person1> vcard:hasEmail _:e_sk_20_1>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> a vcard:Individual>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> a foaf:Person>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> foaf:phone <urn:tel:0213-3123-1231>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> foaf:mbox <mail:bob@somewhere.org>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> foaf:mbox <mail:bob@somewhereElse.org>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> vcard:fn "Bob">> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> vcard:hasTelephone _:e_bn_1_1>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> vcard:hasEmail _:e_bn_2_1>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Person2> vcard:hasEmail _:e_bn_3_1>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<urn:example:Address1> foaf:streetName <urn:example:FarlaneRoad>>> <urn:example:category> foaf:Person.
+<<<urn:example:Address1> foaf:city <urn:example:FarField>>> <urn:example:category> foaf:Person.
+<<_:e_sk_21_1 vcard:hasValue <urn:tel:0012-1219-212-121>>> <urn:example:category> foaf:Person.
+<<_:e_sk_20_1 vcard:hasValue <mail:alice@somewhere.org>>> <urn:example:category> foaf:Person.
+<<<urn:example:Address1> foaf:streetName <urn:example:FarlaneRoad>>> <urn:example:category> vcard:Individual.
+<<<urn:example:Address1> foaf:city <urn:example:FarField>>> <urn:example:category> vcard:Individual.
+<<_:e_sk_21_1 vcard:hasValue <urn:tel:0012-1219-212-121>>> <urn:example:category> vcard:Individual.
+<<_:e_sk_20_1 vcard:hasValue <mail:alice@somewhere.org>>> <urn:example:category> vcard:Individual.
+<<<<<urn:example:Address1> foaf:streetName <urn:example:FarlaneRoad>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Address1> foaf:city <urn:example:FarField>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_sk_21_1 vcard:hasValue <urn:tel:0012-1219-212-121>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_sk_20_1 vcard:hasValue <mail:alice@somewhere.org>>> <urn:example:category> foaf:Person>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Address1> foaf:streetName <urn:example:FarlaneRoad>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<<urn:example:Address1> foaf:city <urn:example:FarField>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_sk_21_1 vcard:hasValue <urn:tel:0012-1219-212-121>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+<<<<_:e_sk_20_1 vcard:hasValue <mail:alice@somewhere.org>>> <urn:example:category> vcard:Individual>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>.
+

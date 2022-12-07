@@ -1,0 +1,18 @@
+@prefix : <urn:example:> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+:Person2 
+    a vcard:Individual ;
+    vcard:fn "Bob" ;
+    vcard:hasTelephone [
+        a vcard:Home, vcard:Voice ;
+        vcard:hasValue <urn:tel:0213-3123-1231>
+    ];
+    vcard:hasEmail [
+        a vcard:Home ;
+        vcard:hasValue <mail:bob@somewhere.org>
+    ];
+    vcard:hasEmail [
+        a vcard:Work ;
+        vcard:hasValue <mail:bob@somewhereElse.org>
+    ].

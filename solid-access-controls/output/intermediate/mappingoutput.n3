@@ -1,0 +1,37 @@
+@prefix : <urn:example:>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+
+<urn:example:Person1> a foaf:Person.
+<urn:example:Person2> a vcard:Individual.
+_:bn_1 a vcard:Home.
+_:bn_1 a vcard:Voice.
+_:bn_2 a vcard:Home.
+_:bn_3 a vcard:Work.
+<urn:example:Person1> a vcard:Individual.
+<urn:example:Person2> a foaf:Person.
+<urn:example:Person1> foaf:name "Alice".
+<urn:example:Person1> foaf:phone <urn:tel:0012-1219-212-121>.
+<urn:example:Person2> foaf:phone <urn:tel:0213-3123-1231>.
+<urn:example:Person1> foaf:mbox <mail:alice@somewhere.org>.
+<urn:example:Person2> foaf:mbox <mail:bob@somewhere.org>.
+<urn:example:Person2> foaf:mbox <mail:bob@somewhereElse.org>.
+<urn:example:Person1> foaf:address <urn:example:Address1>.
+<urn:example:Person1> <urn:example:inLoveWith> <urn:example:Person2>.
+<urn:example:Address1> foaf:streetName <urn:example:FarlaneRoad>.
+<urn:example:Address1> foaf:city <urn:example:FarField>.
+<urn:example:Person2> vcard:fn "Bob".
+<urn:example:Person2> vcard:hasTelephone _:bn_1.
+<urn:example:Person1> vcard:hasTelephone _:sk_21.
+_:bn_1 vcard:hasValue <urn:tel:0213-3123-1231>.
+_:bn_2 vcard:hasValue <mail:bob@somewhere.org>.
+_:bn_3 vcard:hasValue <mail:bob@somewhereElse.org>.
+_:sk_20 vcard:hasValue <mail:alice@somewhere.org>.
+_:sk_21 vcard:hasValue <urn:tel:0012-1219-212-121>.
+<urn:example:Person2> vcard:hasEmail _:bn_2.
+<urn:example:Person2> vcard:hasEmail _:bn_3.
+<urn:example:Person1> vcard:hasEmail _:sk_20.
+

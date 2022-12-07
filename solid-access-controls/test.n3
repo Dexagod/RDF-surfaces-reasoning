@@ -1,0 +1,36 @@
+@prefix : <urn:example:> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+
+
+:a :phone :atel .
+
+:b :hasPhone [
+    :hasValue :btel
+] .
+
+
+# Email matching
+
+(_:S _:O) log:onNegativeSurface {
+    _:S :phone _:O.
+    () log:onNegativeSurface {
+        _:S :hasPhone _:phone.
+        _:phone :hasValue _:O.
+    } .
+} . 
+
+(_:S _:O) log:onNegativeSurface {
+    _:S :hasPhone [
+        :hasValue _:O
+    ].
+    () log:onNegativeSurface {
+        _:S :phone _:O.
+    } .
+} . 
+
+
+(_:S _:P _:O) log:onQuerySurface {
+    _:S _:P _:O .    
+} .

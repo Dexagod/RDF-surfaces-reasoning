@@ -1,0 +1,57 @@
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+# Type matching
+
+(_:S) log:onNegativeSurface {
+    _:S a foaf:Person .
+    () log:onNegativeSurface {
+        _:S a vcard:Individual .
+    } .
+} . 
+
+(_:S) log:onNegativeSurface {
+    _:S a vcard:Individual .
+    () log:onNegativeSurface {
+        _:S a foaf:Person .
+    } .
+} .
+
+# Email matching
+
+(_:S _:O _:email) log:onNegativeSurface {
+    _:S foaf:mbox _:O.
+    () log:onNegativeSurface {
+        _:S vcard:hasEmail _:email.
+        _:email vcard:hasValue _:O.
+    } .
+} . 
+
+(_:S _:O _:email) log:onNegativeSurface {
+    _:S vcard:hasEmail _:email.
+    _:email vcard:hasValue _:O.
+    () log:onNegativeSurface {
+        _:S foaf:mbox _:O .
+    } .
+} .
+
+# Telephone matching
+
+(_:S _:O _:phone) log:onNegativeSurface {
+    _:S foaf:phone _:O.
+    () log:onNegativeSurface {
+        _:S vcard:hasTelephone _:phone.
+        _:phone vcard:hasValue _:O.
+    } .
+} . 
+
+(_:S _:O _:phone) log:onNegativeSurface {
+    _:S vcard:hasTelephone _:phone.
+    _:phone vcard:hasValue _:O.
+    () log:onNegativeSurface {
+        _:S foaf:phone _:O.
+    } .
+} .

@@ -1,0 +1,16 @@
+@prefix : <urn:example:>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+@prefix ruben: <https://rubendedecker.be/profile/card#me>.
+@prefix patrick: <https://patrickhochstenbach.net/profile/card#me>.
+
+() log:onResultSurface {_:e_e_bn_3_1_1 a vcard:Work}.
+() log:onResultSurface {_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>}.
+() log:onMetadataSurface {_:e_e_bn_3_1_1 a vcard:Work. <<_:e_e_bn_3_1_1 a vcard:Work>> <urn:example:category> vcard:Work}.
+() log:onMetadataSurface {_:e_e_bn_3_1_1 a vcard:Work. <<_:e_e_bn_3_1_1 a vcard:Work>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>}.
+() log:onMetadataSurface {_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>. <<_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:category> vcard:Work}.
+() log:onMetadataSurface {_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>. <<_:e_e_bn_3_1_1 vcard:hasValue <mail:bob@somewhereElse.org>>> <urn:example:statedBy> <https://rubendedecker.be/profile/card#me>}.
+

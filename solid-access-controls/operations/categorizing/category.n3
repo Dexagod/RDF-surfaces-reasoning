@@ -1,0 +1,21 @@
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix : <urn:example:>.
+
+
+# categorize
+(_:A _:B _:C _:D _:E _:F) log:onNegativeSurface {
+    _:A a _:B.
+    _:A _:C _:D.
+    () log:onNegativeSurface {
+        <<_:A _:C _:D>> :category _:B.
+    }.
+}.
+
+(_:A _:B _:C _:D _:E _:F _:G _:H) log:onNegativeSurface {
+    <<_:A _:B _:C>> :category _:D.
+    _:C _:E _:F.
+    (_:G {_:C a _:G} ()) log:collectAllIn _:H.
+    () log:onNegativeSurface {
+        <<_:C _:E _:F>> :category _:D.
+    }.
+}.
